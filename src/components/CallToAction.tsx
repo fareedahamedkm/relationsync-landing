@@ -127,7 +127,7 @@ const CallToAction: React.FC = () => {
           <button
             ref={buttonRef}
             className="group relative bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-12 py-6 text-xl md:text-2xl font-bold rounded-lg transition-all duration-300 pulse-glow"
-            onClick={() => window.open('https://relationsync.com', '_blank')}
+            onClick={() => window.open('https://relationsync.netlify.app', '_blank')}
           >
             <span className="flex items-center gap-4">
               Start Diagnostic
