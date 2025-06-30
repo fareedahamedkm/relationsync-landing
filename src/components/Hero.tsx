@@ -134,7 +134,6 @@ const Hero: React.FC = () => {
       yoyo: true,
       repeat: -1,
     });
-
   }, []);
 
   return (
@@ -158,13 +157,13 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-screen-md mx-auto">
+      <div className="relative z-10 text-center w-full px-2 sm:px-4 md:px-6">
         <h1
           ref={titleRef}
-          className="haetten font-black mb-10 leading-none gradient-text"
+          className="haetten font-black mb-10 leading-none gradient-text whitespace-nowrap overflow-hidden"
           style={{
-            fontSize: "clamp(2.25rem, 7vw, 9rem)",
-            letterSpacing: '0.12em',
+            fontSize: "clamp(2rem, 6.5vw, 7rem)",
+            letterSpacing: '0.1em',
           }}
         >
           RELATIONSYNC
@@ -173,15 +172,14 @@ const Hero: React.FC = () => {
         <div className="flex items-center justify-center">
           <p
             ref={taglineRef}
-            className="text-lg md:text-2xl lg:text-3xl font-medium text-purple-600 dark:text-pink-400 typewriter"
+            className="text-base md:text-xl lg:text-2xl font-medium text-purple-600 dark:text-pink-400 typewriter"
             style={{ width: 'fit-content', margin: '0 auto' }}
           >
-            Reveal. Rebuild. Reconnect.
+            Truth. Healing. Clarity.
           </p>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <ChevronDown className="w-6 h-6 text-purple-500 dark:text-pink-400 animate-bounce" />
       </div>
@@ -190,3 +188,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
