@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           className="haetten text-6xl md:text-8xl lg:text-9xl xl:text-[12rem] font-black mb-12 leading-none gradient-text"
           style={{ letterSpacing: '0.2em' }}
         >
-          RS
+          RELATIONSYNC
         </h1>
         
         <div className="flex items-center justify-center">
