@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', 'Impact', Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme */
+body {
+  background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+  color: #1f2937;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0f0a0f 0%, #1a0f1a 100%);
+    color: #f9fafb;
+  }
+}
+
+.haetten {
+  font-family: 'Haettenschweiler', 'Impact', 'Oswald', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.grain {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #a855f7;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #a855f7; }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.floating-word {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(50px) rotate(-5deg);
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: rgba(168, 85, 247, 0.7);
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .floating-word {
+    color: rgba(236, 72, 153, 0.6);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6b21a8 0%, #ec4899 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-text {
+    background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #e879f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from { 
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  }
+  to { 
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(236, 72, 153, 0.2);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @keyframes pulse-glow {
+    from { 
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+    }
+    to { 
+      box-shadow: 0 0 40px rgba(236, 72, 153, 0.7), 0 0 80px rgba(168, 85, 247, 0.3);
+    }
+  }
+}
+
+/* Theme-specific background classes */
+.bg-light-theme {
+  background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+}
+
+.bg-dark-theme {
+  background: linear-gradient(135deg, #0f0a0f 0%, #1a0f1a 100%);
+}
+
+.bg-light-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(243, 232, 255, 0.6) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+}
+
+.bg-dark-card {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(55, 48, 163, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-light-card {
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(55, 48, 163, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(236, 72, 153, 0.2);
+  }
+}
