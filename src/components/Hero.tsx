@@ -175,7 +175,7 @@ const Hero: React.FC = () => {
             className="text-base md:text-xl lg:text-2xl font-medium text-purple-600 dark:text-pink-400 typewriter"
             style={{ width: 'fit-content', margin: '0 auto' }}
           >
-            Truth. Healing. Clarity.
+            Reveal. Rebuild. Reconnect.
           </p>
         </div>
       </div>
