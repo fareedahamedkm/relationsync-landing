@@ -94,7 +94,6 @@
 
 // export default Hero;
 
-
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ChevronDown } from 'lucide-react';
@@ -159,13 +158,13 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-screen-lg mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-screen-md mx-auto">
         <h1
           ref={titleRef}
-          className="haetten font-black mb-12 leading-none gradient-text"
+          className="haetten font-black mb-10 leading-none gradient-text"
           style={{
-            fontSize: "clamp(2.5rem, 8vw, 10rem)",
-            letterSpacing: '0.15em',
+            fontSize: "clamp(2.25rem, 7vw, 9rem)",
+            letterSpacing: '0.12em',
           }}
         >
           RELATIONSYNC
@@ -174,7 +173,7 @@ const Hero: React.FC = () => {
         <div className="flex items-center justify-center">
           <p
             ref={taglineRef}
-            className="text-xl md:text-2xl lg:text-3xl font-medium text-purple-600 dark:text-pink-400 typewriter"
+            className="text-lg md:text-2xl lg:text-3xl font-medium text-purple-600 dark:text-pink-400 typewriter"
             style={{ width: 'fit-content', margin: '0 auto' }}
           >
             Reveal. Rebuild. Reconnect.
@@ -191,4 +190,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
