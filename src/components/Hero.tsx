@@ -94,6 +94,7 @@
 
 // export default Hero;
 
+
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ChevronDown } from 'lucide-react';
@@ -158,13 +159,13 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-screen-lg mx-auto">
         <h1
           ref={titleRef}
           className="haetten font-black mb-12 leading-none gradient-text"
           style={{
-            fontSize: "clamp(3rem, 10vw, 12rem)",
-            letterSpacing: '0.2em',
+            fontSize: "clamp(2.5rem, 8vw, 10rem)",
+            letterSpacing: '0.15em',
           }}
         >
           RELATIONSYNC
@@ -173,20 +174,21 @@ const Hero: React.FC = () => {
         <div className="flex items-center justify-center">
           <p
             ref={taglineRef}
-            className="text-2xl md:text-3xl lg:text-4xl font-medium text-purple-600 dark:text-pink-400 typewriter"
+            className="text-xl md:text-2xl lg:text-3xl font-medium text-purple-600 dark:text-pink-400 typewriter"
             style={{ width: 'fit-content', margin: '0 auto' }}
           >
-            Truth. Healing. Clarity.
+            Reveal. Rebuild. Reconnect.
           </p>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-8 h-8 text-purple-500 dark:text-pink-400 animate-bounce" />
+        <ChevronDown className="w-6 h-6 text-purple-500 dark:text-pink-400 animate-bounce" />
       </div>
     </section>
   );
 };
 
 export default Hero;
+
